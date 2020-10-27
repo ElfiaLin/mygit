@@ -98,6 +98,7 @@ public class EmpController {
         if ("admin".equals(uname) && "123".equals(pwd)){
             return "success";
         }else{
+            System.out.println("你好");
             return "error";
         }
     }
