@@ -1,0 +1,37 @@
+#修改默认端口
+server:
+  port: 8081
+#设置数据源信息
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/mysql
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+  mvc:
+    view:
+      prefix: /WEB-INF/view
+#配置自定义变量
+name: 张三
+#对象
+student:
+  sname: Mike
+  sage: 30
+  ssex: 男
+#数组
+persons:
+  - pname: 李四
+    age: 18
+  - pname: Lucy
+    age: 20
+#注册映射文件
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.jxd.emp.model #设置实体类的别名
+#
+beetl:
+  #当确定前台文件的目录位置后，后缀设置可以省略
+  #suffix: html #将beetl模板文件后缀定义为html
+  #改变beetl的分隔符 以@开头，回车结束
+  DELIMITER_STATEMENT_START: \@
+  DELIMITER_STATEMENT_END: null
